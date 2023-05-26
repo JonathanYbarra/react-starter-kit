@@ -1,5 +1,8 @@
 {
   "name": "react-starter-kit-app",
+  "author": {
+    "name": "react-starter-kit-app by Jono"
+  },
   "private": true,
   "version": "0.0.2",
   "type": "module",
