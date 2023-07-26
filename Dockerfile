@@ -1,23 +1,22 @@
-FROM node:lts-bullseye AS build
+FROM node:hydrogen-alpine AS builder
 
-WORKDIR /app
+RUN export
 
-COPY package*.json .
+WORKDIR /build
+
+COPY package*.json ./
 
 RUN yarn install
 
 COPY . .
+RUN yarn build
 
-RUN yarn run build
+##############################
 
-
-### Stage 2
-FROM nginx:alpine
+FROM nginx:alpine AS production
 
 ADD ./config/default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=build /app/dist /var/www/app/
+COPY --from=builder /app/dist /var/www/app/
 
 EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]

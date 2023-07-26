@@ -6,10 +6,10 @@ import { Grid } from '@mui/material';
 import { SelectProps } from './select.types';
 
 export const Select = (props: SelectProps) => {
-    const { id, label, value, handleChange, selectOptions, emptyLabel = "none" } = props;
+    const { id, label, value, handleChange, selectOptions, emptyLabel = "none", md = 6 } = props;
 
     return (
-        <Grid item md={6}>
+        <Grid item md={md}>
             <FormControl fullWidth>
                 <InputLabel id={id}>{label}</InputLabel>
                 <SelectMUI

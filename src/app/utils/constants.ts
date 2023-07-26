@@ -28,3 +28,13 @@ export const QUERY_STRING = {
     JOINER_PROP: "&",
     JOINER_VALUE: "=",
 } as const;
+
+export const UI_THEME_KEYS = {
+    LOCALSTORAGE: 'ui-theme',
+    LABEL_DARK: 'Dark Mode',
+    LABEL_LIGHT: 'Light Mode',
+} as const;
+
+export const DARK = 'dark' as const;
+export const LIGHT = 'light' as const;
+

@@ -12,4 +12,5 @@ export interface SelectProps {
     handleChange: (event: SelectChangeEvent) => void;
     selectOptions: SelectOption[];
     emptyLabel?: string;
+    md?: number;
 }

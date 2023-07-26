@@ -1,10 +1,12 @@
-import { Typography, Container } from '@mui/material';
+import { Container } from '@mui/material';
 import { Outlet } from 'react-router-dom';
+import { Navbar } from './components/navbar';
 
 export const App = (): JSX.Element => {
+
     return (
         <>
-            <Typography variant="h1">Navbar</Typography>
+            <Navbar />
 
             <Container maxWidth="lg">
                 <Outlet />
