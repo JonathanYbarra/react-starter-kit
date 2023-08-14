@@ -17,10 +17,20 @@ const characterApi = baseApi
                 query: (params) => createGetItemQuery(QUERY_URL.rickandmorty_character, params),
                 providesTags: [TAG_TYPES.rickAndMorty],
             }),
+
+            login: builder.mutation<any, any>({
+                query: (body) => ({
+                  url: '/login',
+                  method: 'POST',
+                  body,
+                }),
+                invalidatesTags: [{ type: TAG_TYPES.rickAndMorty, id: 'LIST' }],
+              }),
         }),
     });
 
 export const {
     useGetCharacterQuery,
-    useGetCharacterByIDQuery
+    useGetCharacterByIDQuery,
+    useLoginMutation
 } = characterApi;
