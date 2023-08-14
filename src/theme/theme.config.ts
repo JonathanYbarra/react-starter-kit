@@ -2,14 +2,7 @@ import { createTheme } from '@mui/material/styles';
 import { PaletteMode } from '@mui/material';
 import { UI_THEME_KEYS } from '../app/utils/constants';
 import { getLocalStorage } from '../utils';
-
-declare module '@mui/material/styles/createPalette' {
-  interface CommonColors {
-    grey: {
-      50: string;
-    };
-  }
-}
+import { colorSchemes } from './tokens';
 
 const getDesignTokens = (mode: PaletteMode) => ({
   typography: {
@@ -24,7 +17,8 @@ const getDesignTokens = (mode: PaletteMode) => ({
     },
   },
   palette: {
-    mode
+    mode,
+    ...colorSchemes
   },
 });
 
