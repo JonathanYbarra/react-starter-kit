@@ -41,8 +41,10 @@ El proyecto sigue la siguiente estructura de directorios:
 └── src
  ├── app         # Configuración y funciones de la API utilizando Redux Toolkit Query
  ├── components  # Componentes reutilizables de React.js
+ ├── hooks       # Custom hooks
  ├── pages       # Páginas principales de la aplicación
  ├── routes      # Sistema de routas
+ ├── theme       # Configuracion de MaterialUI y customizacion del design tokens
  └── utils       # Utilidades y funciones auxiliares
 ```
 
