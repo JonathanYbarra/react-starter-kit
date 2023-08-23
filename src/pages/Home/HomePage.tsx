@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLoginMutation } from "../../app/services/rickAndMortyExample";
-import { Typography } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 
 export const HomePage = (): JSX.Element => {
     const [login, loginResponse] = useLoginMutation();
@@ -8,14 +8,22 @@ export const HomePage = (): JSX.Element => {
 
     useEffect(() => {
         login({
-            username: "algo",
-            password: "algo"
+            username: "jhon",
+            password: "1234"
         })
     }, [])
 
     return (
         <div>
-            <Typography variant="h2">HomePage</Typography>
+            <Typography variant="h1">HomePage</Typography>
+
+            <Button
+                variant="contained"
+                color="primary"
+            >
+                Button Test
+            </Button>
         </div>
     )
 }
+
